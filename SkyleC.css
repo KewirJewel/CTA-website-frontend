@@ -1,0 +1,50 @@
+body {
+  background-color: whitesmoke;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: blue;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: black;
+  color: black;
+  padding: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+img {
+  width: 300px;
+  margin: 10px;
+}
+
+button {
+  background-color: darkgray; /* Green */
+  border: 1;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: orangered;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+

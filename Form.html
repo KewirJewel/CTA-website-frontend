@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTA Registration</title>
+  <link rel="stylesheet" href="skyleC.css">
+</head>
+<body>
+  <form action="mailto:cameroontalentawakening@gmail.com" method="post" enctype="text/plain">
+    <h1>Register for the Talent Show</h1>
+
+    <label for="fullName">Full Name:</label>
+    <p><input type="text" id="fullName" name="fullName" required></p>
+
+    <label for="email">Email:</label>
+    <p><input type="email" id="email" name="email" required></p>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <p><input type="date" id="dateOfBirth" name="dateOfBirth" required></p>
+
+    <label for="birthPlace">Place of Birth:</label>
+    <p><input type="text" id="birthPlace" name="birthPlace" required></p>
+
+    <label for="age">Age:</label>
+    <p><input type="number" id="age" name="age" required></p>
+    
+        <label for="Address">Address:</label>
+    <p><input type="text" id="address" name="address" required></p>
+    
+        <label for="Telephone_Number">Telephone Number:</label>
+    <p><input type="number" id="Telephonenumber" name="Telephone Number" required></p>
+
+    <h2>Tell Us About Yourself</h2>
+    <textarea id="aboutYou" name="aboutYou" rows="5" cols="30" required></textarea>
+
+    <h2>Type of talent</h2>
+    <textarea id="talenttype" name="talenttype" rows="5" cols="30" required></textarea>
+
+    <h2>What Inspired Your Talent?</h2>
+    <textarea id="talentInspiration" name="talentInspiration" rows="5" cols="30" required></textarea>
+
+    <h2>Number of years participating</h2>
+    <textarea id="participation" name="participation" rows="5" cols="30" required></textarea>
+
+    <h2>Experience performing</h2>
+    <textarea id="Experience performing" name="Experienceperforming" rows="3" cols="20" required></textarea>
+   
+    <p><label for="Doyourequireanyinstrumentsorspecialequipmentforyourperformance">Do you require any instruments or special equipment for your performance:</label></p>
+    <p><input type="text" id="requirement" name="requirement" required></p>
+    
+    <label for="profilePicture">Profile Picture:</label>
+    <input type="file" id="profilePicture" name="profile_picture" accept="image/*" required>
+
+    <p><label for="Video">Video:</label></p>
+      <input type="file" id="Video" name="video" accept="video/*" required>
+
+
+    <p><label for="agreementCheckbox">
+  <input type="checkbox" id="agreementCheckbox" required>
+By submitting this form, you certify that all information provided is accurate and that you have read and agree to the terms and conditions of the Cameroon Talent Awakening event.
+</label></p>
+
+<br>
+Please click the submit button below to complete your registration. We will contact you shortly with further information..
+<button type="submit" disabled id="submitButton">Submit</button>
+
+   
+    
+<script>
+  // Enable submit button only when checkbox is checked
+  const agreementCheckbox = document.getElementById('agreementCheckbox');
+  const submitButton = document.getElementById('submitButton');
+
+  agreementCheckbox.addEventListener('change', () => {
+    submitButton.disabled = !agreementCheckbox.checked;
+  });
+</script>
+
+
+    <script>
+      // Enable submit button only when all fields are filled
+      const form = document.querySelector('form');
+      const submitButton = document.getElementById('submitButton');
+      const inputs = form.querySelectorAll('input, textarea');
+
+      inputs.forEach(input => {
+        input.addEventListener('input', () => {
+          submitButton.disabled = !inputs.every(field => field.value);
+        });
+      });
+    </script>
+  </form>
+</body>
+</html>
